@@ -15,7 +15,7 @@ export default function Card({attributes,included}) {
                         return <div className={index === 0? `bg-blue-400 max-h-full rounded-lg border-r-2 border-fuchsia-600 ${spaceDivOne}`: index === 1 ? `bg-blue-400 max-h-full rounded-r-lg border-r-2 border-fuchsia-600 ${spaceDivTwo}`:'bg-blue-400 max-h-full rounded-r-lg col-span-1'}>
                                 <img  src={ref.attributes.gallery_urls[0]} alt='1'></img>
                             </div>
-                    }   
+                    }  
                 })}
             </div>
             <div>

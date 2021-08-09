@@ -4,10 +4,9 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { HiChevronDown } from "react-icons/hi";
 
 const navigation = [
-  { name: 'Cundinamarca', href: '#', current: true },
-  { name: 'Antioquia', href: '#', current: false },
-  { name: 'Recursos', href: '#', current: false },
-  // { name: 'Calendar', href: '#', current: false },
+  { name: 'Cundinamarca', href: 'https://www.lahaus.com/', current: true },
+  { name: 'Antioquia', href: 'https://www.lahaus.com/', current: false },
+  { name: 'Recursos', href: 'https://www.lahaus.com/', current: false },
 ]
 
 function classNames(...classes) {
@@ -72,9 +71,9 @@ export default function Navbar() {
                       <div>
                         <Menu.Button className="bg-gray-100 flex text-gray-700 text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                           Mi perfil
-                          <HiChevronDown/>
+                          
                           <span className="sr-only">Open user menu</span>
-                      
+                          <HiChevronDown/>
                         </Menu.Button>
                       </div>
                       <Transition
@@ -94,7 +93,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="#"
+                                href="https://www.lahaus.com/"
                                 className={classNames(
                                   active ? 'bg-gray-100' : '',
                                   'block px-4 py-2 text-sm text-gray-700'
@@ -107,7 +106,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="#"
+                                href="#p"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
                                   'block px-4 py-2 text-sm text-gray-700'
@@ -146,7 +145,7 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-200 text-black' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-gray-200 text-gray-700' : 'text-gray-700 hover:bg-gray-300 hover:text-gray-700',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
